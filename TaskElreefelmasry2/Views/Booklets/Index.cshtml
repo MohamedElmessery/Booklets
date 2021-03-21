@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TaskElreefelmasry2.Models.Booklets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>BookLets</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Activity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookletStatus)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookletStatus)
+            </td>
+
+        </tr>
+    }
+   
+</table>
